@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import PopularDisplay from "../components/PopularDisplay";
 import Testimonial from "../components/Testimonial";
 import Warranty from "../components/Warranty";
 
 const Homepage = () => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    async function getData() {
-      const res = await fetch("https://dummyjson.com/products");
-      const data = await res.json();
-      setProducts(data.products);
-    }
+  // useEffect(() => {
+  //   async function getData() {
+  //     const res = await fetch("https://dummyjson.com/products");
+  //     const data = await res.json();
+  //     setProducts(data.products);
+  //   }
 
-    getData();
-  }, []);
+  //   getData();
+  // }, []);
 
   return (
     <section className="px-2 lg:px-6">
@@ -51,7 +51,7 @@ const Homepage = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-2 lg:grid-cols-6 lg:gap-6 my-6">
-            {products &&
+            {/* {products &&
               products.slice(0, 12).map((item) => (
                 <PopularDisplay
                   key={item.id}
@@ -60,9 +60,9 @@ const Homepage = () => {
                   products={item.title}
                   image={item.thumbnail}
                 />
-              ))}
+              ))} */}
 
-            {/* <PopularDisplay
+            <PopularDisplay
               price="20000"
               image="./sava.png"
               products="iphone 14pro"
@@ -79,7 +79,7 @@ const Homepage = () => {
               image="./sava.png"
               products="Nokia h10"
               id='3'
-            /> */}
+            />
             {/* <PopularDisplay />
              <PopularDisplay />
              <PopularDisplay />
