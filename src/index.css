@@ -1,0 +1,12 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply bg-orange-300 text-white
+}
+
+.popular {
+  @apply text-orange-400 text-center font-medium w-40 py-1 bg-black capitalize rounded-2xl
+}
