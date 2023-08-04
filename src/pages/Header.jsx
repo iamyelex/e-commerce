@@ -20,12 +20,12 @@ const Header = () => {
     <>
       <header className="sticky top-0 w-full flex flex-row items-center justify-between text-black px-4 lg:px-10 bg-white py-4">
         <div className="flex flex-col">
-          <h1 className="text-lg font-bold uppercase">
+          <Link to='/' className="text-lg font-bold uppercase">
             shop<span className="text-sm capitalize">It</span>
             <p className="absolute top-9 left-8 lg:left-14 text-sm text-black font-thin">
               home of your shopping....
             </p>
-          </h1>
+          </Link>
         </div>
 
         <ul className="hidden lg:flex lg:flex-row lg:space-x-8">
