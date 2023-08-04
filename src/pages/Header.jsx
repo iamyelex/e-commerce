@@ -4,7 +4,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 import { PiShoppingCart } from "react-icons/pi";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 import { useSelector } from "react-redux";
 
 const Header = () => {
@@ -20,8 +20,8 @@ const Header = () => {
     <>
       <header className="sticky top-0 w-full flex flex-row items-center justify-between text-black px-4 lg:px-10 bg-white py-4">
         <div className="flex flex-col">
-          <h1 className="text-lg font-bold">
-            Shop<span className="text-sm">It</span>
+          <h1 className="text-lg font-bold uppercase">
+            shop<span className="text-sm capitalize">It</span>
             <p className="absolute top-9 left-8 lg:left-14 text-sm text-black font-thin">
               home of your shopping....
             </p>
@@ -87,7 +87,7 @@ const Header = () => {
         <Outlet />
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

@@ -5,6 +5,9 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import { Cart, Clothing, Contact, Electronics, Header } from "./pages";
+import ItemDetails, {
+  Loader as itemDetailsLoader,
+} from "./components/ItemDetails";
 import Homepage from "./pages/Homepage";
 
 function App() {
@@ -16,6 +19,11 @@ function App() {
         <Route path="/clothing" element={<Clothing />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
+        <Route
+          path="/item-details/:id"
+          element={<ItemDetails />}
+          loader={itemDetailsLoader}
+        />
       </Route>
     )
   );

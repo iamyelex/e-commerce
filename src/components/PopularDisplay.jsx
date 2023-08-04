@@ -2,6 +2,7 @@
 
 import { useDispatch } from "react-redux";
 import { addToCart } from "../pages/Cart/cartSlice";
+import { Link } from "react-router-dom";
 
 const PopularDisplay = ({ products, price, image, id }) => {
   const dispatch = useDispatch();
@@ -14,13 +15,15 @@ const PopularDisplay = ({ products, price, image, id }) => {
 
   return (
     <div className="text-center border border-black p-2 h-56 rounded-lg">
-      <img
-        src={image}
-        alt="product name"
-        className="w-full h-24 rounded-t-lg"
-      />
-      <p className="text-sm font-thin pt-2">{title}</p>
-      <p className="text-sm font-bold">$ {price}</p>
+      <Link to={`item-details/${id}`}>
+        <img
+          src={image}
+          alt="product name"
+          className="w-full h-24 rounded-t-lg"
+        />
+        <p className="text-sm font-thin pt-2">{title}</p>
+        <p className="text-sm font-bold">$ {price}</p>
+      </Link>
       <button
         className="font-bold bg-black w-full rounded-lg mt-8 hover:text-black hover:bg-white outline-none hover:ease-in duration-300"
         onClick={addItems}
