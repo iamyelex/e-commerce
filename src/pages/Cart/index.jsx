@@ -18,7 +18,7 @@ const Cart = () => {
 
           <div className="flex items-center justify-between px-4 py-1 bg-black">
             <p className="font-bold">Subtotal</p>
-            <p className="font-bold"># {totalAmount}</p>
+            <p className="font-bold">$ {totalAmount}</p>
           </div>
           <p className="font-thin uppercase px-4 py-1">
             cart <span>( {totalQuantity} )</span>

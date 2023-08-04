@@ -1,17 +1,21 @@
+import { useDispatch } from "react-redux";
 import { useLoaderData } from "react-router-dom";
+import { addToCart } from "../pages/Cart/cartSlice";
 
 /* eslint-disable react/prop-types */
 const ItemDetails = () => {
+  const dispatch = useDispatch();
   const item = useLoaderData();
   // console.log(item);
 
-  const { price, title, thumbnail } = item;
+  const { price, title, thumbnail:image, id } = item;
+  console.log(image)
 
   return (
     <section className="p-2">
-      <img src={thumbnail} alt="item-image" className="w-full h-60 rounded-md" />
-      <h2 className="font-semibold capitalize">{title}</h2>
-      <p className="font-bold">#{price}</p>
+      <img src={image} alt="item-image" className="w-full h-60 rounded-md" />
+      <h2 className="font-semibold capitalize pt-1">{title}</h2>
+      <p className="font-bold">$ {price}</p>
       <h5 className="uppercase font-semibold bg-black p-1 rounded-md">
         product details
       </h5>
@@ -28,7 +32,7 @@ const ItemDetails = () => {
       </div>
       <button
         className="sticky bottom-20 font-bold bg-black w-full rounded-lg hover:text-black hover:bg-white outline-none transition-all duration-150 py-2 mt-2 uppercase"
-        // onClick={addItems}
+        onClick={() => dispatch(addToCart(price, title, id, image))}
       >
         Add to Cart
       </button>

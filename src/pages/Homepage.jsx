@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import PopularDisplay from "../components/PopularDisplay";
 import Testimonial from "../components/Testimonial";
 import Warranty from "../components/Warranty";
+import { Link } from "react-router-dom";
+import Loader from "../ui/Loader";
 
 // import Footer from "../components/Footer";
 
@@ -13,7 +15,7 @@ const Homepage = () => {
       const res = await fetch("https://dummyjson.com/products");
       const data = await res.json();
       setProducts(data.products);
-      console.log(data)
+      // console.log(data);
     }
 
     getData();
@@ -22,15 +24,17 @@ const Homepage = () => {
   return (
     <>
       <section className="px-2 lg:px-6">
-        <div className="flex items-center space-x-6 border border-black px-2 lg:px-4">
-          <div className="text-center w-1/3">
-            <h1 className="mb-1">Apple Products</h1>
-            <button className="text-orange-400 text-center  bg-black rounded-lg py-1 w-full capitalize">
-              shop more
-            </button>
+        <Link to={`item-details/2`} className="text-center w-1/3">
+          <div className="flex items-center space-x-6 border border-black px-2 lg:px-4">
+            <div>
+              <h1 className="mb-1">Apple Products</h1>
+              <button className="text-orange-400 text-center  bg-black rounded-lg py-1 w-full capitalize">
+                shop more
+              </button>
+            </div>
+            <img src="" alt="iphone-x" className="w-2/3 h-52 lg:h-96" />
           </div>
-          <img src="" alt="iphone-x" className="w-2/3 h-52 lg:h-96" />
-        </div>
+        </Link>
 
         <main className="mt-4">
           <section>
@@ -54,17 +58,25 @@ const Homepage = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 lg:grid-cols-6 lg:gap-6 my-6">
+            {products.length === 0 && (
+              <div className="flex items-center justify-center mt-4">
+                <Loader />
+              </div>
+            )}
+
+            <div className=" grid grid-cols-2 gap-2 lg:grid-cols-6 lg:gap-6 my-6">
               {products &&
-              products.slice(0, 12).map((item) => (
-                <PopularDisplay
-                  key={item.id}
-                  id={item.id}
-                  price={item.price}
-                  products={item.title}
-                  image={item.thumbnail}
-                />
-              ))}
+                products
+                  .slice(0, 12)
+                  .map((item) => (
+                    <PopularDisplay
+                      key={item.id}
+                      id={item.id}
+                      price={item.price}
+                      products={item.title}
+                      image={item.thumbnail}
+                    />
+                  ))}
 
               {/* <PopularDisplay
                 price="20000"

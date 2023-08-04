@@ -40,7 +40,7 @@ const CartItems = ({ price, title, image, id, quantity }) => {
           <img src={image} alt="" className="h-12 w-12 ob" />
           <div>
             <p>{title}</p>
-            <p># {price}</p>
+            <p>$ {price}</p>
           </div>
         </div>
         <div className="flex items-center justify-between lg:w-96 mt-3">
