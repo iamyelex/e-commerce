@@ -109,7 +109,7 @@ const Homepage = () => {
             </div>
           </section>
 
-          <section className="flex items-end bg-black w-full h-64 rounded-xl p-2 lg:p-4 bg">
+          <section className="flex items-end w-full h-64 rounded-xl p-2 lg:p-4 bg">
             <div className="flex flex-col space-y-3 items-center font-semibold">
               <p className="text-sm lg:text-3xl font-extrabold">
                 Sale up to 50% off
