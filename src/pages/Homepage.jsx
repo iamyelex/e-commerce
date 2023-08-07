@@ -32,7 +32,7 @@ const Homepage = () => {
               </Link>
             </div>
             <img
-              src="https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+              src="./IphoneX.jpg"
               alt="iphone-x"
               className="h-54 lg:h-96 rounded-t-lg"
             />
@@ -109,8 +109,8 @@ const Homepage = () => {
             </div>
           </section>
 
-          <section className="flex items-end justify-center bg-black w-full h-64 rounded-xl p-2 lg:p-4 bg">
-            <div className="flex flex-col space-y-3 items-center w-1/2 text-black font-semibold">
+          <section className="flex items-end bg-black w-full h-64 rounded-xl p-2 lg:p-4 bg">
+            <div className="flex flex-col space-y-3 items-center font-semibold">
               <p className="text-sm lg:text-3xl font-extrabold">
                 Sale up to 50% off
               </p>

@@ -33,7 +33,7 @@
 }
 
 .bg {
-  background-image: url("https://i.dummyjson.com/data/products/8/1.jpg");
+  background-image: url("./Microsoft.jpg");
   background-repeat: no-repeat;
   object-fit: cover;
 }
