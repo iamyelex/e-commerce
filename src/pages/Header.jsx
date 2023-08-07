@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink,  } from "react-router-dom";
 
 import { FaBars } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 import { PiShoppingCart } from "react-icons/pi";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import { useSelector } from "react-redux";
 
 const Header = () => {
@@ -84,10 +84,10 @@ const Header = () => {
             </ul>
           </nav>
         )}
-        <Outlet />
+        {/* <Outlet /> */}
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

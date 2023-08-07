@@ -4,16 +4,17 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import { Cart, Clothing, Contact, Electronics, Header } from "./pages";
+import { Cart, Clothing, Contact, Electronics } from "./pages";
 import ItemDetails, {
   Loader as itemDetailsLoader,
 } from "./components/ItemDetails";
 import Homepage from "./pages/Homepage";
+import AppLayout from "./ui/AppLayout";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Header />}>
+      <Route path="/" element={<AppLayout />}>
         <Route path="/" element={<Homepage />} />
         <Route path="/electronics" element={<Electronics />} />
         <Route path="/clothing" element={<Clothing />} />
@@ -28,7 +29,7 @@ function App() {
     )
   );
 
-  return <RouterProvider router={router} />;
+  return  <RouterProvider router={router} />;
 }
 
 export default App;

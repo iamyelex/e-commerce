@@ -25,14 +25,14 @@ const Homepage = () => {
     <>
       <section className="px-2 lg:px-6">
         <Link to={`item-details/2`} className="text-center w-1/3">
-          <div className="flex items-center space-x-6 border border-black px-2 lg:px-4">
+          <div className="flex items-center space-x-6 border border-black px-1 lg:px-4">
             <div>
               <h1 className="mb-1">Apple Products</h1>
               <button className="text-orange-400 text-center  bg-black rounded-lg py-1 w-full capitalize">
                 shop more
               </button>
             </div>
-            <img src="" alt="iphone-x" className="w-2/3 h-52 lg:h-96" />
+            <img src="https://i.dummyjson.com/data/products/2/thumbnail.jpg" alt="iphone-x" className="w-2/3 h-52 lg:h-96" />
           </div>
         </Link>
 

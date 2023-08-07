@@ -1,15 +1,22 @@
 import { useDispatch } from "react-redux";
-import { useLoaderData } from "react-router-dom";
+
+import { useLoaderData, useLocation } from "react-router-dom";
 import { addToCart } from "../pages/Cart/cartSlice";
+import { useEffect } from "react";
 
 /* eslint-disable react/prop-types */
 const ItemDetails = () => {
   const dispatch = useDispatch();
   const item = useLoaderData();
-  // console.log(item);
 
-  const { price, title, thumbnail:image, id } = item;
-  console.log(image)
+  const { price, title, thumbnail: image, id } = item;
+  // console.log(image, id);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <section className="p-2">
@@ -43,7 +50,6 @@ const ItemDetails = () => {
 export async function Loader({ params }) {
   const details = await fetch(`https://dummyjson.com/products/${params.id}`);
   const data = await details.json();
-  console.log(data);
   return data;
 }
 
