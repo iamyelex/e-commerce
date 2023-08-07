@@ -24,17 +24,20 @@ const Homepage = () => {
   return (
     <>
       <section className="px-2 lg:px-6">
-        <Link to={`item-details/2`} className="text-center w-1/3">
-          <div className="flex items-center space-x-6 border border-black px-1 lg:px-4">
-            <div>
-              <h1 className="mb-1">Apple Products</h1>
-              <button className="text-orange-400 text-center  bg-black rounded-lg py-1 w-full capitalize">
-                shop more
-              </button>
+        <div  className="text-center">
+          <div className="relative mt-2">
+            <div className="absolute bottom-3 left-1">
+              <Link to={`item-details/2`} className="text-black text-center  bg-orange-400 rounded-lg py-1  px-4 w-full capitalize outline-none font-semibold">
+                shop now
+              </Link>
             </div>
-            <img src="https://i.dummyjson.com/data/products/2/thumbnail.jpg" alt="iphone-x" className="w-2/3 h-52 lg:h-96" />
+            <img
+              src="https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+              alt="iphone-x"
+              className="h-54 lg:h-96 rounded-t-lg"
+            />
           </div>
-        </Link>
+        </div>
 
         <main className="mt-4">
           <section>
@@ -106,15 +109,14 @@ const Homepage = () => {
             </div>
           </section>
 
-          <section className="flex items-center bg-black w-full h-80 rounded-xl p-2 lg:p-4">
-            <img src="" alt="microsoft" className="h-full w-1/2" />
-            <div className="flex flex-col space-y-3 items-center w-1/2">
-              <p className="text-sm lg:text-3xl font-bold">
+          <section className="flex items-end justify-center bg-black w-full h-64 rounded-xl p-2 lg:p-4 bg">
+            <div className="flex flex-col space-y-3 items-center w-1/2 text-black font-semibold">
+              <p className="text-sm lg:text-3xl font-extrabold">
                 Sale up to 50% off
               </p>
-              <button className="text-black text-center  bg-orange-400 rounded-lg py-1 w-full capitalize outline-none">
+              <Link to={`item-details/8`} className="text-black text-center  bg-orange-400 rounded-lg py-1 w-full capitalize outline-none font-semibold">
                 shop now
-              </button>
+              </Link>
             </div>
           </section>
 

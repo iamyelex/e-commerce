@@ -31,3 +31,9 @@
     background-position: 0% 50%, 50% 50%, 100% 100%;
   }
 }
+
+.bg {
+  background-image: url("https://i.dummyjson.com/data/products/8/1.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
